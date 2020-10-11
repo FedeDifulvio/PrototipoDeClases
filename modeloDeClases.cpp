@@ -1,7 +1,6 @@
 #include <cstdlib>
 #include <iostream>
-///HOLA PADRE
- using namespace std;
+using namespace std;
 
 class Proveedor{
       private:
