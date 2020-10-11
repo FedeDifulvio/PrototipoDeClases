@@ -23,6 +23,8 @@ class Proveedor{
  };
 
 class aleGazzo{
+public:
+  int gato;
 };
 
 
@@ -83,7 +85,7 @@ public:
 
 class Bombon : public Articulo{
 public:
-      void setTipoBombon();      /// 1-COMÚN, 2- CON LICOR.
+      void setTipoBombon();      /// 1-COMï¿½N, 2- CON LICOR.
       int  getTipoBombon();
 
 
@@ -103,5 +105,3 @@ int main(){
   return 0;
 
   }
-
-
