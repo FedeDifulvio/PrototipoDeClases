@@ -21,10 +21,6 @@ class Proveedor{
      char * getMail ();
  };
 
-class aleGazzo{
-public:
-  int gato;
-};
 
 
 class Cliente{
