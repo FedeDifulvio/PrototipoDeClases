@@ -86,6 +86,39 @@ public:
 
 };
 
+class CajaBombon : public Articulo{
+public:
+      void setTipoBombon();      /// 1-COM�N, 2- CON LICOR.
+      int  getTipoBombon();
+      void setSurtido();      /// 1-igual 2-mixto
+      int  getSurtido();
+
+};
+
+class BolsaCaramelos : public Articulo{
+public:
+      void setTipoCaramelo();     /// 1- miel  2-menta
+      int  getTipoCaramelo();
+      void setSurtido();      /// 1-igual 2-mixto
+      int  getSurtido();
+
+};
+
+class Caramelo : public Articulo{
+public:
+  void setTipoCaramelo();
+  int  getTipoCaramelo();
+};
+
+
+class Alfajor : public Articulo{
+public:
+  void setTipoAlfajor();      
+  int  getTipoAlfajor();
+};
+
+
+
 
 
 
