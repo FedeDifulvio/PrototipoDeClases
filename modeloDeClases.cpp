@@ -4,7 +4,7 @@ using namespace std;
 
 class Proveedor{
       private:
-      int codigo;
+      char codigo[5];   ///Codigo compuesto por  3 0 4 letras.
       char nombre[70];
       char mail[70];
       bool estado;
@@ -12,10 +12,10 @@ class Proveedor{
       public:
       Proveedor();
       ~Proveedor();
-     void setCodigo (int);
-     void setNombre(char []);
-     void setMail (char []);
-     void setEstado( bool );
+     void setCodigo ();
+     void setNombre();
+     void setMail ();
+     void setEstado();
       int getCodigo ();
      char * getNombre();
      char * getMail ();
@@ -25,8 +25,7 @@ class Proveedor{
 
 class Cliente{
       private:
-      int codigo;
-      int dni;
+      int dni;  ///Su código indentificador
       char nombre[70];
       char apellido[70];
       char numTelefono[70];
@@ -35,12 +34,10 @@ class Cliente{
       public:
       Cliente ();
       ~Cliente();
-     void setCodigo (int);
-     void setNombre(char []);
-      void setApellido(char []);
-     void setMail (char []);
-     void setEstado( bool );
-      int getCodigo ();
+     void setNombre();
+      void setApellido();
+     void setMail ();
+     void setEstado();
      char * getNombre();
       char * getApellido();
      char *getMail ();
@@ -51,11 +48,18 @@ class Cliente{
 class Fecha{
 private:
       int dia, mes, anio;
+public:
+      void setDia();
+      void setMes();
+      void setAnio();
+      int getDia();
+      int getMes();
+      int getAnio();
  };
 
 class Articulo{
 protected:
-      int codigo;
+      char codigo[7];  ///Código alfanumerico compuesto por 3 numeros y 3 letras.
       char nombre[70];
       float precio;
       int codTipo;
@@ -64,7 +68,7 @@ protected:
 public:
       void setCodigo();
       void setNombre();
-      void  setPrecio(int);  ///recibe el subtipo del articulo. Ej: en el chocolate, un tipo es blanco y difiere en precio a los otros.
+      void  setPrecio();
       char *getNombre();
       float getPrecio();
       int getClasificacion();
@@ -75,7 +79,6 @@ public:
       void setTipoChocolate();      /// 1-BLANCO, 2- AMARGO, 3 -ALMENDRADO.
       int  getTipoChocolate();
 
-
 };
 
 class Bombon : public Articulo{
@@ -83,12 +86,11 @@ public:
       void setTipoBombon();      /// 1-COM�N, 2- CON LICOR.
       int  getTipoBombon();
 
-
 };
 
 class CajaBombon : public Articulo{
 public:
-      void setTipoBombon();      /// 1-COM�N, 2- CON LICOR.
+      void setTipoBombon();      /// 1-COMUN, 2- CON LICOR.
       int  getTipoBombon();
       void setSurtido();      /// 1-igual 2-mixto
       int  getSurtido();
@@ -113,23 +115,8 @@ public:
 
 class Alfajor : public Articulo{
 public:
-  void setTipoAlfajor();      
+  void setTipoAlfajor();
   int  getTipoAlfajor();
 };
 
 
-
-
-
-
-
-
-
-int main(){
-
-
-
-  system("pause");
-  return 0;
-
-  }
