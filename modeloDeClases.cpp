@@ -120,3 +120,68 @@ public:
 };
 
 
+class Fecha{
+      private:
+      int dia, mes, anio;
+      public:
+      Fecha ();  ///Al instanciar un objeto fecha, se le asignará la fecha del sistema.
+      int getDia();
+      int getMes();
+      int getAnio();
+      void mostrarFecha();
+
+};
+
+class compra{
+     private:
+     int codCompra; ///Codigo numerico.
+     char  codProducto[7]; /// 3 numeros y 3 letras
+     char codProveedor[5]; /// 3 o cuatro letras
+     char nombreProducto[30];
+     char tipoProducto[50];
+     int cantidad;
+     Fecha hoy;
+
+
+     public:
+
+    void setCodigo(int );
+    void setCodProducto();
+    void setCantidad();
+    void setCodProveedor();
+    void setNombreProducto();
+    void setTipoProducto();
+    int getCodigo();
+    char * getCodProducto();
+    int  getCantidad();
+    char *  getCodigoProveedor();
+    char *  getNombreProducto();
+    char *   getTipoProducto();
+    Fecha getHoy();
+    bool grabarEnDisco();
+
+} ;
+
+
+class IDGenerator{
+private:
+      int pos;
+      int ID;
+public:
+     int generatePos();
+      int generateID();
+      int getID();
+      int getPos();
+      bool grabarEnDisco();
+      bool leerDisco(int );
+};
+
+
+
+
+
+
+
+
+
+
