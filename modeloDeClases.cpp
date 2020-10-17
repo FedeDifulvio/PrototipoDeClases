@@ -45,18 +45,6 @@ class Cliente{
 
  };
 
-class Fecha{
-private:
-      int dia, mes, anio;
-public:
-      void setDia();
-      void setMes();
-      void setAnio();
-      int getDia();
-      int getMes();
-      int getAnio();
- };
-
 class Articulo{
 protected:
       char codigo[7];  ///Código alfanumerico compuesto por 3 numeros y 3 letras.
