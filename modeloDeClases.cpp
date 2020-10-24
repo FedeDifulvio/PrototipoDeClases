@@ -36,20 +36,26 @@ class Cliente{
       int dni;  ///Su código indentificador
       char nombre[70];
       char apellido[70];
-      char numTelefono[70];
+      int numTelefono;
       bool estado;
 
       public:
-      Cliente ();
-      ~Cliente();
+
+     void setDni ();
      void setNombre();
-      void setApellido();
-     void setMail ();
-     void setEstado();
+     void setApellido();
+     void setNumTelefono();
+     void setEstado(bool);
      char * getNombre();
-      char * getApellido();
-     char *getMail ();
-     char *getNumTelefono();
+     char * getApellido();
+     int  getDni ();
+     int getPosicion(int);
+     int  getNumTelefono();
+     bool getEstado();
+     bool grabarEnDisco(int = -1);
+     bool leerDeDisco(int);
+     void mostrarRegistro();
+
 
  };
 
